@@ -29,6 +29,8 @@ var sayilar = [
   867.7,
 ];
 
+
+
 /* ÖRNEK GÖREV: KareninAlani fonksiyonunu kullanarak aşağıdakileri uygulayın: 
 	1. Karenin kenar uzunluğunu fonksiyonun tek parametresi olarak alacak 
 	2. Karenin alanını hesaplayacak (💡 İPUCU: karenin alanı = karenin kenar uzunluğunun karesi)
@@ -147,20 +149,17 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 
 tekraredensayilar = [];
 
-for (let i = 0; i < sayilar.length; i++) {
-  let sayi = sayilar[i];
-  let tekrarSayisi = 0;
-  for (let a = 0; a < sayilar.length; a++) {
-    if (sayi == sayilar[a]) {
-      tekrarSayisi++;
+sayilar.forEach(item=> {
+  let tekrarSayi=0 ; 
+  for(let i=0 ; i<sayilar.length ; i++){
+    if(item==sayilar[i]){
+      tekrarSayi+=1
     }
-  }
-  if (tekrarSayisi > 1) {
-    tekraredensayilar.push(`${sayi} sayısı ${tekrarSayisi} kere tekrar edilmiştir.`);
-  }
-}
+  };
+  if(tekrarSayi>1){
+  tekraredensayilar.push(`${item} sayısı ${tekrarSayi} kere tekrar edilmiştir.`)}}) 
 
-console.log(tekraredensayilar);
+  console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
