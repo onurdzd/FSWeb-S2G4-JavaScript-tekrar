@@ -164,7 +164,7 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 // }}) 
 
 tekraredensayilar = [];
-tekrarSayiObje={};
+let tekrarSayiObje={};
 
 for(let i = 0 ; i< sayilar.length ; i++) {
   if(tekrarSayiObje[sayilar[i]]==undefined){
@@ -175,7 +175,7 @@ for(let i = 0 ; i< sayilar.length ; i++) {
 }
 for(let key in tekrarSayiObje){
   if(tekrarSayiObje[key]>1)[
-    tekraredensayilar.push(`${key} sayısı ${tekrarSayiObje[key]} kere tekrar edilmiştir.`)
+    tekraredensayilar.push(`${key} sayısı ${tekrarSayiObje[key]} kere tekrar edilmiştir`)
   ]
 }
 
