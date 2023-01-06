@@ -147,19 +147,39 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 
 //3f çözümü
 
+// tekraredensayilar = [];
+
+// sayilar.forEach(item=> {
+//   let tekrarSayi=0 ; 
+//   for(let i=0 ; i<sayilar.length ; i++){
+//     if(item==sayilar[i]){
+//       tekrarSayi+=1
+//     }
+//   };
+
+//   if(tekrarSayi>1){
+//   tekraredensayilar.push(`${item} sayısı ${tekrarSayi} kere tekrar edilmiştir.`)
+
+//   console.log(tekrarSayiObje)
+// }}) 
+
 tekraredensayilar = [];
+tekrarSayiObje={};
 
-sayilar.forEach(item=> {
-  let tekrarSayi=0 ; 
-  for(let i=0 ; i<sayilar.length ; i++){
-    if(item==sayilar[i]){
-      tekrarSayi+=1
-    }
-  };
-  if(tekrarSayi>1){
-  tekraredensayilar.push(`${item} sayısı ${tekrarSayi} kere tekrar edilmiştir.`)}}) 
+for(let i = 0 ; i< sayilar.length ; i++) {
+  if(tekrarSayiObje[sayilar[i]]==undefined){
+    tekrarSayiObje[sayilar[i]] = 1;
+  }else{
+    tekrarSayiObje[sayilar[i]] += 1
+  }
+}
+for(let key in tekrarSayiObje){
+  if(tekrarSayiObje[key]>1)[
+    tekraredensayilar.push(`${key} sayısı ${tekrarSayiObje[key]} kere tekrar edilmiştir.`)
+  ]
+}
 
-  console.log(tekraredensayilar);
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
